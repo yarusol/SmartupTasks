@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+	TODO:
+		adaptive size of "Next" and "Prev" carousel's buttons	
+		hard size of carousel - independent on size of image
+		text over image (carousel-caption)
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Main featuring area</title>
+
+		<!-- vvvvvvvvvvvvv jQuery vvvvvvvvvvvvvvvvv -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- ^^^^^^^^^^^^^ jQuery ^^^^^^^^^^^^^^^^^ -->
+
+		<!-- vvvvvvvvvvvvv BOOTSTRAP vvvvvvvvvvvvvvvvv -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="bootstrap-dist/css/bootstrap.css" />
+		<script src="bootstrap-dist/js/carousel.js"> ; </script>
+		<script src="js/carousel-js_initializer.js"> ; </script>
+		<!-- ^^^^^^^^^^^^^ BOOTSTRAP ^^^^^^^^^^^^^^^^^ -->
+
+
+		<link rel="stylesheet" href="css/mfa.css" />
+
+	</head>
+	<body>
+		<h1>Main Featuring Area</h1>
+
+		<div id="MFA" class="container">
+			<div id="MFA-carousel" class="carousel slide" data-ride="carousel" >
+				<ol class="carousel-indicators" >
+					<li data-target="#MFA-carousel" data-slide-to="0" class="active" />
+					<li data-target="#MFA-carousel" data-slide-to="1" />
+					<li data-target="#MFA-carousel" data-slide-to="2" />
+				</ol>
+				<div class="carousel-inner" role="listbox" >
+					<div class="item active text-center"  >
+						<img alt="one" src="img/launch1.jpg" /> 
+						ПЕрший слайд
+					</div>
+					<div class="item text-center" >
+						<img alt="two" src="img/launch2.jpg" />
+						Другий слайд
+					</div>
+					<div class="item text-center" text-align="center">
+						<img alt="three" src="img/launch3.jpg" />
+						Третій слайд
+					</div>
+				</div>
+				<a class="left carousel-control" href="#MFA-carousel" role="button" data-slide="prev">
+					<span class="icon-prev" aria-hidden="true"/>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#MFA-carousel" role="button" data-slide="next">
+					<span class="icon-next" aria-hidden="true"/>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+
+
+	</body>
+</html>
