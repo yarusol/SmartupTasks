@@ -23,7 +23,10 @@
     }
 
     .nia-part .back {
+		padding: 15px;
         background-color: lightgray;
+		font: 700 18px Arial, sans-serif;
+		font-style:italic;
     }
 
     .nia-part li .avatar {
