@@ -1,0 +1,117 @@
+.nia-part {
+    background: #f3ffff;
+    display: inline-block;
+    padding: 45px;
+    text-align: center;
+    font: 700 24px Arial, sans-serif;
+}
+
+    .nia-part li {
+        display: inline-block;
+        margin-left: 5px;
+        width: 250px;
+        height: 500px;
+        text-align: center;
+    }
+
+        .nia-part li:first-child {
+            margin-left: 0;
+        }
+
+    .nia-part .front {
+        background-color: white;
+    }
+
+    .nia-part .back {
+        background-color: lightgray;
+    }
+
+    .nia-part li .avatar {
+        background-image: url("../img/investor1.jpg");
+        background-clip: border-box;
+        border-radius: 50%;
+        width: 217px;
+        height: 217px;
+        position: absolute;
+        left: 16px;
+    }
+
+    .nia-part li:nth-child(odd) .avatar {
+        top: 90px;
+    }
+
+    .nia-part li:nth-child(even) .avatar {
+        bottom: 90px;
+    }
+
+	.nia-part li:nth-child(4n - 3) .avatar {
+        background-image: url("../img/investor1.jpg");
+    }
+	.nia-part li:nth-child(4n - 2) .avatar {
+        background-image: url("../img/investor2.jpg");
+    }
+	.nia-part li:nth-child(4n - 1) .avatar {
+        background-image: url("../img/investor3.jpg");
+    }
+	.nia-part li:nth-child(4n - 0) .avatar {
+        background-image: url("../img/investor4.jpg");
+    }
+
+
+
+
+    /* QUOTATION of a notible investor */
+    .nia-part li .quotation {
+        position: absolute;
+        width: 200px;
+        left: 20px;
+        text-align: center;
+        color: #00aeef;
+    }
+
+        .nia-part li .quotation:before {
+            content: "«";
+        }
+
+        .nia-part li .quotation:after {
+            content: "»";
+        }
+
+    .nia-part li:nth-child(odd) .quotation {
+        top: 350px;
+    }
+
+    .nia-part li:nth-child(even) .quotation {
+        bottom: 350px;
+    }
+
+
+
+
+    /* TITLE of a notible investor */
+    .nia-part li .title {
+        position: absolute;
+        width: 200px;
+        left: 20px;
+        text-align: center;
+        color: #555;
+    }
+
+        .nia-part li .title span {
+            display: block;
+        }
+
+            .nia-part li .title span:last-child {
+                font-size: 75%;
+                font-weight: 100;
+            }
+
+    .nia-part li:nth-child(odd) .title {
+        top: 30px;
+    }
+
+    .nia-part li:nth-child(even) .title {
+        bottom: 30px;
+    }
+
+

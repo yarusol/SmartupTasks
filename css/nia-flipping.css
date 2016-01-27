@@ -1,0 +1,64 @@
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+    /* flip the pane when hovered */
+    .flip-container:hover .back {
+        transform: rotateY(0deg);
+    }
+    /* flip the pane when hovered */
+    .flip-container:hover .front {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container .front,
+    .flip-container .back {
+        width: inherit;
+        height: inherit;
+        backface-visibility: hidden; /* hide back of pane during swap */
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .flip-container .front {
+        z-index: 2; /* front pane, placed above back */
+        transform: rotateY(0deg);
+    }
+
+    .flip-container .back {
+        transform: rotateY(-180deg); /* back, initially hidden pane */
+    }
+
+    .flip-container .flipper {
+        transition: 0.8s; /* flip speed goes here */
+        transform-style: preserve-3d;
+        position: relative;
+        width: inherit;
+        height: inherit;
+    }
+
+
+
+
+/*                            */
+/* Some vertical flip updates */
+/*                            */
+.vertical.flip-container .back {
+    transform: rotateX(180deg);
+}
+
+.vertical.flip-container:hover .back {
+    transform: rotateX(0deg);
+}
+
+.vertical.flip-container:hover .front {
+    transform: rotateX(180deg);
+}
