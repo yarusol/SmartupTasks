@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+<head>
+	<title>Main Featuring Area</title>
+	<meta charset="utf-8" />
+
+	<script src="js/angular.js"></script>
+	<script src="js/angular-animate.js"></script>
+	<script src="js/ui-bootstrap-tpls-1.1.0.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<script src="js/NiaCarouselCtrl.js"></script>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/nia-flipping.css" />
+	<link rel="stylesheet" href="css/nia-layout.css" />
+</head>
+<body>
+	<h1>Main Featuring Area</h1>
+	<h3>(using Angular.UI)</h3>
+	<div id="MFA" ng-controller="NiaCarouselCtrl">
+		<uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+			<uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+				<ul class="nia-part">
+					<li class="flip-container " ng-repeat="investor in slide.investors" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="avatar" style="background-image: url({{investor.avatar}})"></div>
+								<div class="quotation">{{investor.textFront}}</div>
+								<div class="title"><span>{{investor.name}}</span><span>{{investor.position}}</span></div>
+							</div>
+							<div class="back">
+								{{investor.textBack}}
+							</div>
+						</div>
+					</li>
+				</ul>
+			</uib-slide>
+		</uib-carousel>
+	</div>
+</body>
+</html>
